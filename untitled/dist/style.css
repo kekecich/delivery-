@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 0 20px;
+  background: url("https://i.postimg.cc/yxnr9nrm/download-10.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  position: relative;
+}
+
+main,
+header,
+footer {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px auto;
+  max-width: 1000px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: red;
+}
+
+/* Header */
+header {
+  background: #28a745;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+/* Hero Title */
+.hero-title {
+  background-image: url("https://i.postimg.cc/sDdp9pRS/download-11.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-title h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+/* Food Grid */
+.food-grid,
+.special-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+/* Food Item */
+.food-item {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  animation: floatUp 0.6s ease forwards;
+  border: 1px solid #ddd;
+}
+
+.food-item:hover {
+  transform: scale(1.05) rotateZ(1deg);
+  box-shadow: 0 10px 20px rgba(255, 140, 0, 0.4);
+  border: 1px solid #ff9800;
+}
+
+.food-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.food-item:hover img {
+  transform: scale(1.08);
+}
+
+.food-item h3 {
+  font-size: 1.2em;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.food-item p {
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: #e64a19;
+}
+
+/* Special Animation Card */
+.special-card {
+  animation: floatBounce 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.special-card button {
+  animation: pulseGlow 2s infinite;
+}
+
+/* Cart Section */
+#cart {
+  background: #f9f9f9;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#cart ul {
+  list-style: none;
+}
+
+#cart li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+/* Contact Section */
+#contact {
+  margin: 30px 0;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact input,
+#contact textarea {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1em;
+}
+
+#contact button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1em;
+}
+
+/* Order Status */
+#order-status {
+  background: #fff3cd;
+  padding: 16px;
+  border-left: 5px solid #ffc107;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* About Us */
+#about-us {
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
+
+/* Animations */
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatBounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(255, 140, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(255, 140, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(255, 140, 0, 0.4);
+  }
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 600px) {
+  .food-grid,
+  .special-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .special-card {
+    padding: 20px;
+    font-size: 1.1em;
+  }
+
+  .special-card img {
+    width: 100%;
+    max-width: 280px;
+  }
+}

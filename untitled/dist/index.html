@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DireDawa UV</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="hero-title">
+      <h1>Delivery with street boy for DireDawa University</h1>
+    </div>
+    <nav>
+      <button id="cart-toggle">🛒 Cart (<span id="cart-count">0</span>)</button>
+      <button id="theme-toggle">🌓 Dark mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="food-list">
+      <h2>Available Food</h2>
+      <div class="food-grid">
+        <!-- Default items -->
+        <div class="food-item" data-id="1" data-name="Injera Firfir" data-price="60">
+          <img src="https://i.postimg.cc/02w8Yw0T/download.jpg" alt="Injera Firfir" />
+          <h3>Injera Firfir</h3>
+          <p>80 ETB</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="food-item" data-id="2" data-name="Shiro Wot" data-price="50">
+          <img src="https://i.postimg.cc/K4Shq0Dd/download-1.jpg" alt="Shiro Wot" />
+          <h3>Shiro Wot</h3>
+          <p>80 ETB</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Added 5 new food items -->
+        <div class="food-item" data-id="3" data-name="ፓስታ" data-price="70">
+          <img src="https://i.postimg.cc/tCWsXfwn/download-2.jpg" alt="ፓስታ" />
+          <h3>ፓስታ</h3>
+          <p>70 ብር</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="food-item" data-id="4" data-name="ሶያ" data-price="55">
+          <img src="https://i.postimg.cc/9Q2rzbH8/download-3.jpg" alt="ሶያ" />
+          <h3>ሶያ</h3>
+          <p>85 ብር</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="food-item" data-id="5" data-name="እንቁላል ፍርፍር" data-price="60">
+          <img src="https://i.postimg.cc/4N63CcHz/download-4.jpg" alt="እንቁላል ፍርፍር" />
+          <h3>እንቁላል ፍርፍር</h3>
+          <p>100 ብር</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="food-item" data-id="6" data-name="ቲማቲም ሰላጣ" data-price="40">
+          <img src="https://i.postimg.cc/DzZfbYjg/download-5.jpg" alt="ቲማቲም ሰላጣ" />
+          <h3>ቲማቲም ሰላጣ</h3>
+          <p>85 ብር</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="food-item" data-id="7" data-name="ድንች ቀቂል" data-price="45">
+          <img src="https://i.postimg.cc/NM2gd2w2/download-6.jpg" alt="ድንች" />
+          <h3>ድንች</h3>
+          <p>80 ብር</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="food-item special-card" data-id="8" data-name="Water" data-price="30">
+          <img src="https://i.postimg.cc/G2LfpZXL/download-12.jpg" alt="Water" />
+          <h3>Water</h3>
+          <p>30 ብር</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="cart" class="hidden">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: <span id="cart-total">0</span> ETB</p>
+    </section>
+
+    <select required>
+      <option value="">የማንን ምግብ ይወዳሉ</option>
+      <option value="Sada">1. Sada</option>
+      <option value="Beza">2. Beza</option>
+      <option value="alemnesh">3. Alemnesh</option>
+      <option value="Sista Girlis">4. Sista Girlis</option>
+      <option value="Fiker cafe">5. Fiker Cafe</option>
+    </select>
+
+    <section id="contact">
+      <h2>Delivery Info</h2>
+      <form action="https://formsubmit.co/YOUR-EMAIL@example.com" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="text" name="phone" placeholder="Phone Number" required />
+        <textarea name="location" placeholder="Block/dorm" required></textarea>
+        <label for="payment-proof">Upload Payment Screenshot (optional):</label>
+        <input type="file" id="payment-proof" name="payment-proof" accept="image/*" />
+        <button type="submit">Place Order</button>
+
+        <!-- Optional hidden fields for spam protection & redirect -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="thank-you.html">
+      </form>
+    </section>
+
+    <div id="order-status">
+      <h3>📦 Order Status</h3>
+      <p>Your order is being prepared. Estimated delivery: 20–30 minutes.</p>
+    </div>
+
+    <section id="about-us">
+      <h2>🙋‍♀️ About Us</h2>
+      <p>We are a student-run food delivery service in Dire Dawa. Fast, affordable, and freshly made meals delivered to your dorm or doorstep!
+        With Street Boy, you help them and get your food on time.</p>
+    </section>
+
+    <div id="order-summary" style="display:none;">
+      <h3>✅ Order Summary</h3>
+      <ul id="summary-items"></ul>
+      <p>Total: <strong id="summary-total">0 ብር</strong></p>
+    </div>
+
+    <section id="faq">
+      <h3>❓ FAQ</h3>
+      <details>
+        <summary>How do I pay?</summary>
+        <p>You can pay via Telebirr, CBE Birr, or cash on delivery.</p>
+      </details>
+      <details>
+        <summary>How long does delivery take?</summary>
+        <p>Usually 20–45 minutes within Dire Dawa University and town.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DireDawa Eats. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
